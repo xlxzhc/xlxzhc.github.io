@@ -1,0 +1,68 @@
+.loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.spinner {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  
+  &.small {
+    .bounce1, .bounce2, .bounce3 {
+      width: 8px;
+      height: 8px;
+    }
+  }
+  
+  &.medium {
+    .bounce1, .bounce2, .bounce3 {
+      width: 12px;
+      height: 12px;
+    }
+  }
+  
+  &.large {
+    .bounce1, .bounce2, .bounce3 {
+      width: 16px;
+      height: 16px;
+    }
+  }
+}
+
+.bounce1, .bounce2, .bounce3 {
+  background-color: var(--accent-primary);
+  border-radius: 100%;
+  animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+}
+
+.bounce1 {
+  animation-delay: -0.32s;
+}
+
+.bounce2 {
+  animation-delay: -0.16s;
+}
+
+.bounce3 {
+  animation-delay: 0s;
+}
+
+@keyframes sk-bouncedelay {
+  0%, 80%, 100% {
+    transform: scale(0);
+  }
+  40% {
+    transform: scale(1.0);
+  }
+}
+
+.message {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  margin: 0;
+}

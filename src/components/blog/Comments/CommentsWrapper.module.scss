@@ -1,0 +1,223 @@
+.commentsWrapper {
+  margin-top: 3rem;
+}
+
+.systemSelector {
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.selectorHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  
+  span {
+    font-weight: 500;
+    color: var(--text-primary);
+    font-size: 0.9rem;
+  }
+}
+
+.toggleGroup {
+  display: flex;
+  background-color: var(--bg-tertiary);
+  border-radius: 0.5rem;
+  padding: 0.25rem;
+  border: 1px solid var(--border-color);
+}
+
+.toggleButton {
+  background: none;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  
+  &:hover:not(:disabled) {
+    color: var(--text-primary);
+    background-color: var(--bg-primary);
+  }
+  
+  &.active {
+    background-color: var(--accent-primary);
+    color: white;
+    box-shadow: 0 2px 4px rgba(0, 123, 255, 0.2);
+  }
+  
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    color: var(--text-muted);
+  }
+}
+
+.systemInfo {
+  p {
+    margin: 0;
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+}
+
+.badge {
+  background-color: var(--accent-primary);
+  color: white;
+  font-size: 0.75rem;
+  padding: 0.2rem 0.5rem;
+  border-radius: 0.25rem;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.configNotice {
+  background: linear-gradient(135deg, #fff3cd, #ffeaa7);
+  border: 1px solid #ffc107;
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  
+  [data-theme="dark"] & {
+    background: linear-gradient(135deg, rgba(255, 193, 7, 0.1), rgba(255, 234, 167, 0.1));
+    border-color: rgba(255, 193, 7, 0.3);
+  }
+  
+  h4 {
+    color: #856404;
+    margin: 0 0 1rem 0;
+    font-size: 1.1rem;
+    
+    [data-theme="dark"] & {
+      color: #ffc107;
+    }
+  }
+  
+  p {
+    color: #856404;
+    margin: 0 0 1rem 0;
+    line-height: 1.5;
+    
+    [data-theme="dark"] & {
+      color: #ffeaa7;
+    }
+    
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  
+  ol {
+    color: #856404;
+    margin: 1rem 0;
+    padding-left: 1.5rem;
+    
+    [data-theme="dark"] & {
+      color: #ffeaa7;
+    }
+    
+    li {
+      margin-bottom: 0.5rem;
+      line-height: 1.4;
+    }
+  }
+  
+  a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: 500;
+    
+    &:hover {
+      text-decoration: underline;
+    }
+    
+    [data-theme="dark"] & {
+      color: #4dabf7;
+    }
+  }
+}
+
+// 响应式适配
+@media (max-width: 768px) {
+  .systemSelector {
+    padding: 1rem;
+  }
+  
+  .selectorHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    
+    span {
+      font-size: 0.85rem;
+    }
+  }
+  
+  .toggleGroup {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .toggleButton {
+    flex: 1;
+    padding: 0.6rem 0.8rem;
+    font-size: 0.8rem;
+  }
+  
+  .systemInfo p {
+    font-size: 0.8rem;
+    text-align: center;
+  }
+  
+  .configNotice {
+    padding: 1rem;
+    
+    h4 {
+      font-size: 1rem;
+    }
+    
+    p, ol {
+      font-size: 0.875rem;
+    }
+  }
+}
+
+// 动画效果
+.systemSelector {
+  animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.configNotice {
+  animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

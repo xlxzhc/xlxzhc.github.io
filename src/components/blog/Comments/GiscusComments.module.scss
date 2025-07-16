@@ -1,0 +1,190 @@
+.giscusComments {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border-color);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  
+  h3 {
+    margin: 0;
+    color: var(--text-primary);
+    font-size: 1.5rem;
+  }
+}
+
+.info {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  
+  span {
+    background-color: var(--bg-secondary);
+    padding: 0.25rem 0.75rem;
+    border-radius: 1rem;
+    border: 1px solid var(--border-color);
+  }
+}
+
+.error {
+  background-color: var(--bg-secondary);
+  border: 1px solid #ff6b6b;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  
+  p {
+    color: #ff6b6b;
+    margin: 0 0 1rem 0;
+    font-weight: 500;
+  }
+}
+
+.retryButton {
+  background-color: #ff6b6b;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease;
+  
+  &:hover {
+    background-color: #ff5252;
+  }
+}
+
+.giscusContainer {
+  min-height: 200px;
+  
+  // 确保Giscus iframe样式与博客主题一致
+  :global(.giscus) {
+    width: 100%;
+  }
+  
+  :global(.giscus-frame) {
+    border: none;
+    width: 100%;
+    background-color: transparent;
+  }
+  
+  // 暗黑主题适配
+  &[data-theme="dark"] {
+    :global(.giscus-frame) {
+      color-scheme: dark;
+    }
+  }
+}
+
+.loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 2rem;
+  text-align: center;
+  
+  p {
+    color: var(--text-secondary);
+    margin: 1rem 0 0 0;
+    font-size: 0.9rem;
+  }
+}
+
+.spinner {
+  width: 2rem;
+  height: 2rem;
+  border: 2px solid var(--border-color);
+  border-top: 2px solid var(--accent-primary);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.footer {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-color);
+  
+  p {
+    color: var(--text-muted);
+    font-size: 0.875rem;
+    margin: 0;
+    text-align: center;
+    line-height: 1.5;
+  }
+}
+
+// 响应式适配
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    
+    h3 {
+      font-size: 1.25rem;
+    }
+  }
+  
+  .info {
+    width: 100%;
+    justify-content: center;
+    
+    span {
+      font-size: 0.8rem;
+      padding: 0.2rem 0.6rem;
+    }
+  }
+  
+  .loading {
+    padding: 2rem 1rem;
+  }
+  
+  .footer p {
+    font-size: 0.8rem;
+  }
+}
+
+// 确保Giscus在不同主题下的样式一致性
+.giscusContainer {
+  // 覆盖Giscus的默认样式以匹配博客主题
+  :global(.giscus) {
+    --color-prettylights-syntax-comment: var(--text-muted);
+    --color-prettylights-syntax-constant: var(--accent-primary);
+    --color-prettylights-syntax-entity: var(--accent-secondary);
+    --color-prettylights-syntax-storage-modifier-import: var(--text-primary);
+    --color-prettylights-syntax-entity-tag: var(--accent-primary);
+    --color-prettylights-syntax-keyword: var(--accent-secondary);
+    --color-prettylights-syntax-string: var(--text-secondary);
+    --color-prettylights-syntax-variable: var(--text-primary);
+    --color-prettylights-syntax-brackethighlighter-unmatched: #ff6b6b;
+    --color-prettylights-syntax-invalid-illegal: #ff6b6b;
+    --color-prettylights-syntax-carriage-return: #ff6b6b;
+    --color-prettylights-syntax-string-regexp: var(--accent-primary);
+    --color-prettylights-syntax-markup-list: var(--text-secondary);
+    --color-prettylights-syntax-markup-heading: var(--text-primary);
+    --color-prettylights-syntax-markup-italic: var(--text-secondary);
+    --color-prettylights-syntax-markup-bold: var(--text-primary);
+    --color-prettylights-syntax-markup-deleted: #ff6b6b;
+    --color-prettylights-syntax-markup-inserted: #4caf50;
+    --color-prettylights-syntax-markup-changed: var(--accent-primary);
+    --color-prettylights-syntax-markup-ignored: var(--text-muted);
+    --color-prettylights-syntax-meta-diff-range: var(--accent-secondary);
+    --color-prettylights-syntax-brackethighlighter-angle: var(--text-muted);
+    --color-prettylights-syntax-sublimelinter-gutter-mark: var(--text-muted);
+    --color-prettylights-syntax-constant-other-reference-link: var(--accent-primary);
+  }
+}
