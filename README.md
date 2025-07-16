@@ -71,7 +71,7 @@ npm run build:sitemap
 2. GitHub Actions 自动构建和部署
 3. 网站将在 `https://[username].github.io` 可用
 
-详细部署指南请参考 [DEPLOYMENT.md](./DEPLOYMENT.md)
+详细部署指南请参考 [DEPLOYMENT.md](./docs/setup/DEPLOYMENT.md)
 
 ### 手动部署
 
@@ -159,7 +159,7 @@ npm run build
 3. 更新 `scripts/generate-sitemap.js` 中的文章数据
 4. 重新构建和部署
 
-详细内容管理指南请参考 [CONTENT_GUIDE.md](./CONTENT_GUIDE.md)
+详细内容管理指南请参考 [CONTENT_GUIDE.md](./docs/guides/CONTENT_GUIDE.md)
 
 ### 文章格式
 
@@ -195,7 +195,7 @@ npm run build
 3. 访问 [giscus.app](https://giscus.app/zh-CN) 获取配置参数
 4. 更新 `src/config/giscus.ts` 中的配置
 
-详细设置指南：[GISCUS_SETUP.md](./GISCUS_SETUP.md)
+详细设置指南：[GISCUS_SETUP.md](./docs/setup/GISCUS_SETUP.md)
 
 ### 🔗 GitHub Issues - 传统方式
 
@@ -210,7 +210,7 @@ npm run create:issues
 - 支持 Markdown 语法和代码高亮
 - 自动邮件通知
 
-详细配置指南请参考 [COMMENTS_GUIDE.md](./COMMENTS_GUIDE.md)
+详细配置指南请参考 [COMMENTS_GUIDE.md](./docs/guides/COMMENTS_GUIDE.md)
 
 ## 🤝 贡献
 
@@ -226,5 +226,22 @@ MIT License
 - Email: contact@xlxzhc.com
 
 ---
+
+## 📚 文档导航
+
+完整的项目文档已整理到 [docs/](./docs/) 目录：
+
+### 🚀 部署配置
+- [部署指南](./docs/setup/DEPLOYMENT.md) - 详细的部署步骤和配置
+- [Giscus设置](./docs/setup/GISCUS_SETUP.md) - 无感评论系统配置
+- [最终部署步骤](./docs/setup/FINAL_DEPLOYMENT_STEPS.md) - 完整的部署检查清单
+
+### 📖 使用指南
+- [内容管理](./docs/guides/CONTENT_GUIDE.md) - 文章创建和管理指南
+- [评论系统](./docs/guides/COMMENTS_GUIDE.md) - 评论功能使用说明
+
+### 🛠️ 开发文档
+- [项目总结](./docs/development/PROJECT_SUMMARY.md) - 完整的技术架构说明
+- [提交分析](./docs/development/COMMIT_ANALYSIS.md) - 代码提交策略分析
 
 ⭐ 如果这个项目对你有帮助，请给个 Star！
