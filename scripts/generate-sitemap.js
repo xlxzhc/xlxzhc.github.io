@@ -33,6 +33,16 @@ const posts = [
     tags: ['Vite', '构建工具', '性能优化'],
     author: 'xlxzhc',
     readTime: 12
+  },
+  {
+    id: '4',
+    title: '微信链接重定向绕过插件：Fiddler插件开发实战',
+    slug: 'weixin-redirect-bypass-fiddler-plugin',
+    excerpt: '深入解析微信链接拦截机制，使用Fiddler插件技术实现自动绕过，包含HTTP拦截、URL提取、JavaScript注入等核心技术实现。',
+    date: '2025-01-22',
+    tags: ['Fiddler', 'C#', 'HTTP代理', '插件开发', '微信'],
+    author: 'xlxzhc',
+    readTime: 15
   }
 ]
 
