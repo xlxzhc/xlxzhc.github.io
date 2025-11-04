@@ -4,10 +4,11 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build && node scripts/generate-sitemap.js",
+    "dev": "node scripts/generate-blog-index.js && vite",
+    "build": "node scripts/generate-blog-index.js && vite build && node scripts/generate-sitemap.js",
     "preview": "vite preview",
     "build:sitemap": "node scripts/generate-sitemap.js",
+    "build:blog": "node scripts/generate-blog-index.js",
     "create:issues": "node scripts/create-comment-issues.js"
   },
   "devDependencies": {

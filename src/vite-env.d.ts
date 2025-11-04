@@ -1,16 +1,15 @@
 /// <reference types="vite/client" />
 
-declare module '*.module.css' {
-  const classes: { [key: string]: string }
-  export default classes
+interface ImportMetaEnv {
+  readonly VITE_APP_TITLE: string
+  // 更多环境变量...
 }
 
-declare module '*.module.scss' {
-  const classes: { [key: string]: string }
-  export default classes
-}
-
-declare module '*.module.sass' {
-  const classes: { [key: string]: string }
-  export default classes
+interface ImportMeta {
+  readonly env: ImportMetaEnv
+  // 添加 glob 类型支持
+  glob: (pattern: string, options?: {
+    eager?: boolean
+    as?: 'raw' | 'url'
+  }) => Record<string, any>
 }
