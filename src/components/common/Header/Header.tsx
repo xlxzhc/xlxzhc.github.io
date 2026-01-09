@@ -11,6 +11,11 @@ const Header: React.FC = () => {
 
   const navItems = [
     { path: '/', label: '首页' },
+    {
+      path: 'https://xlxzhc.github.io/sf-express-return-picture/',
+      label: '顺丰退货截图',
+      external: true,
+    },
     { path: '/about', label: '关于' },
   ]
 
@@ -27,18 +32,31 @@ const Header: React.FC = () => {
           </Link>
 
           <nav className={clsx(styles.nav, { [styles.navOpen]: isMenuOpen })}>
-            {navItems.map((item) => (
-              <Link
-                key={item.path}
-                to={item.path}
-                className={clsx(styles.navLink, {
-                  [styles.active]: location.pathname === item.path,
-                })}
-                onClick={() => setIsMenuOpen(false)}
-              >
-                {item.label}
-              </Link>
-            ))}
+            {navItems.map((item) =>
+              item.external ? (
+                <a
+                  key={item.path}
+                  href={item.path}
+                  className={styles.navLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  {item.label}
+                </a>
+              ) : (
+                <Link
+                  key={item.path}
+                  to={item.path}
+                  className={clsx(styles.navLink, {
+                    [styles.active]: location.pathname === item.path,
+                  })}
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  {item.label}
+                </Link>
+              ),
+            )}
           </nav>
 
           <div className={styles.headerActions}>

@@ -5,6 +5,7 @@ author: "xlxzhc"
 tags: ["自动化", "青龙面板", "Node.js", "脚本开发"]
 category: "技术分享"
 description: "深入解析 ql-scripts 项目中的两个实用自动化脚本：小米运动刷步数和晓晓优选能量任务，涵盖技术实现、API 集成、配置管理等核心内容"
+featured: true
 ---
 
 # 青龙面板自动化脚本实战：小米运动刷步数与晓晓优选能量任务详解

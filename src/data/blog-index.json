@@ -14,7 +14,7 @@
     "description": "深入解析 ql-scripts 项目中的两个实用自动化脚本：小米运动刷步数和晓晓优选能量任务，涵盖技术实现、API 集成、配置管理等核心内容",
     "excerpt": "深入解析 ql-scripts 项目中的两个实用自动化脚本：小米运动刷步数和晓晓优选能量任务，涵盖技术实现、API 集成、配置管理等核心内容",
     "readTime": 5,
-    "featured": false
+    "featured": true
   },
   {
     "slug": "weixin-redirect-bypass-fiddler-plugin",
@@ -48,7 +48,7 @@
     "description": "这是我的第一篇博客文章,介绍了这个网站的技术栈和未来规划。",
     "excerpt": "这是我的第一篇博客文章,介绍了这个网站的技术栈和未来规划。",
     "readTime": 1,
-    "featured": true
+    "featured": false
   },
   {
     "slug": "react-typescript-best-practices",

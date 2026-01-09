@@ -5,7 +5,7 @@ author: "xlxzhc"
 tags: ["博客", "介绍", "React"]
 category: "介绍"
 description: "这是我的第一篇博客文章,介绍了这个网站的技术栈和未来规划。"
-featured: true
+featured: false
 ---
 
 # 欢迎来到我的博客
